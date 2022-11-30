@@ -80,3 +80,12 @@
     }
     
 }
+.rodape{
+    position: absolute;
+    bottom: 0;
+    background-color: black;
+    color: rgb(145, 140, 140);
+    width: 100%;
+    text-align: center;
+    font-size: 12px;
+}

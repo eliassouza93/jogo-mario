@@ -2,6 +2,7 @@
 
 const mario = document.querySelector('.mario')
 const pipe = document.querySelector('.pipe')
+const score = document.querySelector('.score')
 
 const jump = () => {
     mario.classList.add('jump')
@@ -10,18 +11,35 @@ const jump = () => {
         mario.classList.remove('jump')
     }, 800);
 }
+/********************************************************** */
+let num = 0
+let conversaoNum = parseInt(num)
+
+function Tempo() {
+    cron = setInterval(() => {
+        score.textContent = conversaoNum += 1
+    }, 300)
+
+
+}
+
+
+
+Tempo()
+
+
+/********************************************************** */
 const loop = setInterval(() => {
 
+    const pipePosition = pipe.offsetLeft
+    const marioPosition = +window.getComputedStyle(mario).bottom.replace('px', '')
 
-const pipePosition = pipe.offsetLeft
-const marioPosition = +window.getComputedStyle(mario).bottom.replace('px', '')
-
-    if (pipePosition <= 120 && pipePosition > 0 && marioPosition < 80 ) {
+    if (pipePosition <= 120 && pipePosition > 0 && marioPosition < 80) {
         pipe.style.animation = 'none'
-        pipe.style.left =  `${pipePosition}px`
+        pipe.style.left = `${pipePosition}px`
 
         mario.style.animation = 'none'
-        mario.style.bottom =  `${pipePosition}px`
+        mario.style.bottom = `${pipePosition}px`
 
         mario.src = './img/game-over.png'
         mario.style.width = '75px'
