@@ -3,6 +3,7 @@
 const mario = document.querySelector('.mario')
 const pipe = document.querySelector('.pipe')
 const score = document.querySelector('.score')
+const clouds = document.querySelector('.clouds')
 
 const jump = () => {
     mario.classList.add('jump')
@@ -18,14 +19,13 @@ let conversaoNum = parseInt(num)
 function Tempo() {
     cron = setInterval(() => {
         score.textContent = conversaoNum += 1
-    }, 300)
+    }, 320)
 
 
 }
-
-
-
 Tempo()
+
+
 
 
 /********************************************************** */
@@ -40,12 +40,28 @@ const loop = setInterval(() => {
 
         mario.style.animation = 'none'
         mario.style.bottom = `${pipePosition}px`
+        
+        clouds.style.display = 'none'
+        mario.style.display = 'none'
+        pipe.style.display = 'none'
 
         mario.src = './img/game-over.png'
         mario.style.width = '75px'
         mario.style.marginLeft = '50px'
-
+       
         clearInterval(loop)
+        var game = document.querySelector('.game-board')
+        game.style.background ='black'
+
+        var msg = document.querySelector('.msg')
+        msg.style.border= '2px solid white';
+        msg.style.padding = '20px'
+        msg.style.color = 'white'
+        msg.textContent = 'Fim de Jogo! ' + 'Total de Pontos: ' + conversaoNum
+        
+       
+        
+        
     }
 
 }, 10)
