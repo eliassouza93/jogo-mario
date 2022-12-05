@@ -2,6 +2,11 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family:  sans-serif;
+}
+.aparece{
+    display: none;
+    
 }
 
 .clouds {
@@ -105,13 +110,14 @@
     font-size: 35px;
 
 }
-.pai-pular{
+
+.pai-pular {
     width: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
 
-    
+
 }
 
 .pular {
@@ -122,20 +128,35 @@
     background-color: rgba(53, 106, 119, 0.466);
     box-shadow: 2px 4px 9px rgba(0, 0, 0, 0.315);
 }
-.pular:active{
+
+.pular:active {
     background-color: rgb(53, 106, 119);
     color: rgb(255, 255, 255);
 }
-.pai-restart{
+
+.pai-restart {
     display: flex;
     justify-content: center;
-     
+
 }
-.restart{
+
+.restart {
     width: 50%;
     height: 120px;
     font-size: 30px;
     cursor: pointer;
     background-color: red;
     border-radius: 8px;
+}
+
+@media screen and (max-width: 900px) {
+    .game-board, .pular{
+        display: none;
+    }
+    .aparece{
+        display: block;
+        font-size: 20px;
+        text-align: center;
+    }
+
 }
