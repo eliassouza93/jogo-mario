@@ -3,7 +3,8 @@
     padding: 0;
     box-sizing: border-box;
 }
-.clouds{
+
+.clouds {
     width: 450px;
     position: absolute;
     animation: clouds-animation 20s infinite linear;
@@ -41,7 +42,7 @@
     width: 150px;
     position: absolute;
     bottom: 0;
-  
+
 }
 
 .jump {
@@ -71,16 +72,19 @@
     }
 
 }
+
 @keyframes clouds-animation {
     from {
         right: -450px;
     }
+
     to {
         right: 100%;
     }
-    
+
 }
-.rodape{
+
+.rodape {
     position: absolute;
     bottom: 0;
     background-color: black;
@@ -89,13 +93,49 @@
     text-align: center;
     font-size: 12px;
 }
-.msg{
+
+.msg {
     text-align: center;
     font-family: sans-serif;
-    font-size: 30px;
+    font-size: 33px;
+
+}
+
+.score {
+    font-size: 35px;
+
+}
+.pai-pular{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
     
 }
-.score{
-    font-size: 35px;
+
+.pular {
+    width: 99%;
+    height: 120px;
+    cursor: pointer;
+    font-size: 30px;
+    background-color: rgba(53, 106, 119, 0.466);
+    box-shadow: 2px 4px 9px rgba(0, 0, 0, 0.315);
+}
+.pular:active{
+    background-color: rgb(53, 106, 119);
+    color: rgb(255, 255, 255);
+}
+.pai-restart{
+    display: flex;
+    justify-content: center;
      
+}
+.restart{
+    width: 50%;
+    height: 120px;
+    font-size: 30px;
+    cursor: pointer;
+    background-color: red;
+    border-radius: 8px;
 }
